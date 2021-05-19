@@ -33,7 +33,8 @@ pipeline{
     }
     post {
         success {
-	    echo "Todo ha funcionado correctamente" 
+	    echo "Todo ha funcionado correctamente"
+	    sh "echo ${CHANGE_AUTHOR} > /tmp/f1.txt
 	}
     }
 }
