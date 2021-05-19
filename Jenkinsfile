@@ -20,6 +20,12 @@ pipeline{
 		sh './mvnw package'
 	    }
 	}
+	stage('package') {
+	    steps {
+		echo "Estoy probando el codigo de Sprint Boot"
+		sh './mvnw package'
+	    }
+	}
     }
 }
 
