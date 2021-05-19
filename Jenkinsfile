@@ -24,10 +24,10 @@ pipeline{
 		    sh "rm -rf ./target"
 	    }
 	}
-	stage('package') {
+	stage('deploy') {
 	    steps {
-		echo "Estoy probando el codigo de Sprint Boot"
-		sh './mvnw package'
+		echo "Estoy desplegando "
+		sh 'cp target/calculadora-0.0.1-SNAPSHOT.jar /tmp'
 	    }
 	}
     }
