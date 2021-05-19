@@ -22,7 +22,7 @@ pipeline{
             post {
 		failure {
 		    sh "rm -rf ./target"
-	    }
+		}}
 	}
 	stage('deploy') {
 	    steps {
