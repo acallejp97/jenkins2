@@ -14,6 +14,12 @@ pipeline{
 		sh './mvnw test'
 	    }
 	}
+	stage('Generar JAR') {
+	    steps {
+		echo "Estoy generando el JAR de Sprint Boot"
+		sh './mvnw package'
+	    }
+	}
     }
 }
 
