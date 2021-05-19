@@ -1,9 +1,5 @@
 pipeline{
     agent any
-    
-    environment{
-        author="Asier"
-    }
 
     stages {
         stage('Compilar') {
@@ -39,7 +35,7 @@ pipeline{
     post {
         success {
             echo "Todo ha funcionado correctamente"
-            sh "echo El autor es ${author} > /tmp/f1.txt"
+            sh "echo ${CHANGE_AUTHOR} > /tmp/f1.txt"
         }
     }
 }
