@@ -5,7 +5,7 @@ pipeline{
     }
     triggers {
       upstream 'ProbarAgente'
-      cron '* * * * *'
+      pollSCM '* * * * *'
     }
     
     stages {
