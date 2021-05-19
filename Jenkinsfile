@@ -3,7 +3,11 @@ pipeline{
     environment{
         author="Asier"
     }
-
+    triggers {
+      upstream 'ProbarAgente'
+      cron '* * * * *'
+    }
+    
     stages {
         stage('Compilar') {
             steps {
