@@ -3,10 +3,12 @@ pipeline{
     environment{
         author="Asier"
     }
+    /* Triggers a lanzar
     triggers {
       upstream 'ProbarAgente'
       pollSCM '* * * * *'
     }
+    */
     
     stages {
         stage('Compilar') {
@@ -46,5 +48,3 @@ pipeline{
         }
     }
 }
-
-
